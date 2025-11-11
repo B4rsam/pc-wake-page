@@ -1,5 +1,7 @@
-const LandingPage = () => {
-  return <>Yo</>;
+import LandingPage from "@/src/pages/landing";
+
+const Landing = () => {
+  return <LandingPage />;
 };
 
-export default LandingPage;
+export default Landing;
