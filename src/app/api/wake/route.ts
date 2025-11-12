@@ -1,5 +1,8 @@
 import {NextResponse} from "next/server";
+import wol from "wake_on_lan";
 
 export const PUT = () => {
-    return new NextResponse("ok", { status: 200 });
+    wol.wake(process.env.MAC as string);
+
+    return new NextResponse("Wake command launched", { status: 201 });
 };
